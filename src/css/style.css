@@ -151,6 +151,18 @@ section {
 	transition: background .3s ease-in-out;
 }
 
+.makeFirstContact {
+	z-index: 9;
+	position: absolute;
+	bottom: 90px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 200px;
+	height: 100px;
+	background: rgba(0, 0, 0, 0);
+}
+
 #bio_section {
 	position: relative;
 }
