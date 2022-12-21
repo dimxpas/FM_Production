@@ -31,6 +31,7 @@ jQuery(document).ready(function () {
     });
 
     $("#video_demo").on("play", function() {
+        $("#video_demo").addClass("animated-video");
         setTimeout(function() {
             afterVideo();
             $("#video_demo").removeClass("animated-video");
