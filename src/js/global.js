@@ -23,6 +23,7 @@ jQuery(document).ready(function () {
         $("#bio_section").addClass("bio-start-animation");
         $("#project_section").addClass("project-start-animation");
         $("#presta_section").addClass("presta-start-animation");
+        $("#video_container").css("perspective", "none");
     }
 
     $("#btn_access").click(function() {
@@ -32,6 +33,7 @@ jQuery(document).ready(function () {
     $("#video_demo").on("play", function() {
         setTimeout(function() {
             afterVideo();
+            $("#video_demo").removeClass("animated-video");
         }, 21000);
     });
 
@@ -41,5 +43,19 @@ jQuery(document).ready(function () {
         $(this).removeClass("animated blurpMove");
         }, 1000);
     });
+    
+    // Perspective
+    document.onmousemove = handleMouseMove;
+    target = document.getElementById("video_demo");
+    console.log(target);
+    function handleMouseMove(event) {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    // const yAxisDegree = event.pageX / width * 10 - 5;
+    // const xAxisDegree = event.pageY / height * -1 * 10 + 5;
+    const yAxisDegree = event.pageX / width * 20 - 10;
+    const xAxisDegree = event.pageY / height * -1 * 20 + 10;
+    target.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg)`;
+    }
 
 });
