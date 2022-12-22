@@ -144,6 +144,7 @@ section {
 	opacity: 85%;
 	filter: grayscale(1) blur(15px) !important;
 	-webkit-filter: grayscale(1) blur(15px) brightness(40%) !important;
+	transition: 2s;
 }
 #video_vol {
 	/* position */
